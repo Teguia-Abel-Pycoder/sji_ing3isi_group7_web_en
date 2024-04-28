@@ -173,7 +173,7 @@ body{
 .box-2{
     width: 40%;
     min-height: 400px;
-    background-color: #313a61;
+    background-color: #313a6100;
 
 }
 .box-3{
@@ -194,11 +194,25 @@ body{
     background-color: brown;
     height: 50px;
     width: 200px;
+    font-family: "Luckiest Guy", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2rem;
 }
 .column-1{
     width: 30%;
     height: 50px;
     background-color: rgb(42, 165, 122);
+    text-align: center;
+
+}
+.column-1 h5{
+    font-family: "Luckiest Guy", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2rem;
+    color: #191919;
+    margin-top: 5px;
 
 }
 .column-2{
@@ -207,15 +221,21 @@ body{
     background-color: rgb(165, 118, 42);
 
 }
-hr{
-    all: unset;
-    
-}
+
+
 .number-line{
-    width: 100%;
+    width: 80%;
     height: 5px;
     color: chartreuse;
     background-color: chartreuse;
     padding: 0px;
-    margin: 0px;
+    margin-top: -110px;
+    border-radius: 90px;
+    border: none;
+}
+.main-img{
+    width: 550px;
+    height: auto;
+    margin-left: -30px;
+    margin-top: -50px;
 }
