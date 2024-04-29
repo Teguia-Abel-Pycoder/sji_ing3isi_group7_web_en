@@ -8,12 +8,16 @@ body{
 }
 .container{
     height: 400px;
-    background-color: rgba(137, 43, 226, 0);
+    background-image: url("/Related-files/bg.svg" );
     width: 100%;
     display: block;
     font-weight: 400;
     font-style: normal;
     padding-top: 0px;
+    height: 745px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
     
 }
 .sub-container-1{
@@ -179,9 +183,10 @@ body{
 .box-3{
     width: 20%;
     min-height: 400px;
-    background-color: #6a3976;
+    background-color: #6a397600;
     display: block;
     padding-top: 60px;
+    margin-left: 50px;
 }
 .head-row{
     font-family: "Poppins", sans-serif;
@@ -191,19 +196,20 @@ body{
 }
 .row{
     display: flex;
-    background-color: brown;
+    background-color: rgba(165, 42, 42, 0);
     height: 50px;
     width: 200px;
     font-family: "Luckiest Guy", cursive;
     font-weight: 400;
     font-style: normal;
     font-size: 2rem;
+    margin: 20px 0px;
 }
 .column-1{
     width: 30%;
     height: 50px;
-    background-color: rgb(42, 165, 122);
-    text-align: center;
+    background-color: rgba(42, 165, 122, 0);
+    text-align: left;
 
 }
 .column-1 h5{
@@ -211,17 +217,26 @@ body{
     font-weight: 400;
     font-style: normal;
     font-size: 2rem;
-    color: #191919;
+    color: #ff6868;
     margin-top: 5px;
 
 }
 .column-2{
     width: 70%;
     height: 50px;
-    background-color: rgb(165, 118, 42);
+    background-color: rgba(165, 118, 42, 0);
 
 }
+.column-2 h5{
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1rem;
+    color: #484848;
+    margin-top: 13px;
+    margin-left: 15px;
 
+}
 
 .number-line{
     width: 80%;
