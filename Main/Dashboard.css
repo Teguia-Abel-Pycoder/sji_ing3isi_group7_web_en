@@ -3,6 +3,7 @@
     --border-color-light: #fdb409;
     --text-color-light: black; 
     --bg-color-dark: #242222;
+    --bg-color-dark2: #a19055;
     --text-color-dark: #fff;
   }
 
@@ -25,6 +26,7 @@ body{
     min-width: 200px;
     top: 0;
     left: 0;
+    transition: 0.5s;
 }
 .Right-menu {
     margin-left: 14.65%;
@@ -34,6 +36,10 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    background-image: url("/Related-files/bg.svg" );
+    background-size: contain;
+    background-position: center;
+    transition: 0.5s;
 
 }
 button{
@@ -133,4 +139,6 @@ header .toggle{
     background-color: var(--bg-color-dark);
     color: var(--text-color-dark);
   }
- 
+.dark-mode2 {
+    background-color: var(--bg-color-dark2);
+  }

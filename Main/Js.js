@@ -7,16 +7,19 @@ document.getElementById('toggleMode').addEventListener('click', function() {
 
 function toggleMode() {
   const leftMenu = document.querySelector('.left-menu');
+  const rightMenu = document.querySelector('.Right-menu');
   const innerMenu = document.querySelector('.sub-menu');
   const innerbutton = innerMenu.querySelectorAll('button');
   if (isDarkMode) {
     leftMenu.classList.add('dark-mode');
+    rightMenu.classList.add('dark-mode2');
     innerbutton.forEach(button => {
       button.style.color = 'white'; // Change text color to white
     });
     $('#modes').attr('src', "/Related-files/icons8-soleil-50.png");
   } else {
     leftMenu.classList.remove('dark-mode');
+    rightMenu.classList.remove('dark-mode2');
     innerbutton.forEach(button => {
     button.style.color = 'black'; // Change text color to black
     });
