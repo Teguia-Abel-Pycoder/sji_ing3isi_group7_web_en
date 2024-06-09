@@ -35,11 +35,12 @@ body{
     background-color: #fff9e9;
     display: flex;
     align-items: center;
-    justify-content: center;
     background-image: url("/Related-files/bg.svg" );
     background-size: contain;
     background-position: center;
     transition: 0.5s;
+    display: flex;
+    flex-direction: column;
 
 }
 button{
@@ -66,7 +67,8 @@ button{
     justify-content: space-between;
 }
 .inner-menu button
-{  text-decoration: none;
+{  
+    text-decoration: none;
     border-radius: 0;
     margin-bottom: 5%;
     color: var(--text-color-light);
@@ -96,15 +98,29 @@ header .toggle{
     cursor: pointer;
     border-radius: 5px;
 }
-.left-menu button:hover{
+.left-menu button:hover,.left-menu button:focus{
     border: 3.5px solid #fdb409;
+    outline: none;
     box-shadow: 1px 1px 10px  #6d600c04;
     margin-left: 10px;
     scale: 1.025;
     border-radius: 10px;
     cursor: pointer;
-    transition: 100ms;padding-left: 3%;
+    transition: 100ms;
+    padding-left: 3%;
 }
+.active-btn{
+    border: 3.5px solid #fdb409;
+    outline: none;
+    box-shadow: 1px 1px 10px  #6d600c04;
+    margin-left: 10px;
+    scale: 1.025;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 100ms;
+    padding-left: 3%;
+}
+
 .bottom-menu button:hover{
     border: 3.5px solid #ffffff;
 }
@@ -118,6 +134,7 @@ header .toggle{
     align-items: center;
     gap: 4% 2% ;
 }
+
 .item-menu button{
     width: 100%;
     height: 100%;
@@ -125,9 +142,28 @@ header .toggle{
     background-repeat: no-repeat;
     background-position:top;
     font-size: 20px;
-    text-shadow: 1px 1px 1px white;
     cursor: pointer;
     transition-duration: 300ms;
+    position: inherit;
+}
+.sub-menu button a{
+    text-decoration: none;
+    color: black;
+     text-shadow: 1px 1px 1px white;
+}
+/* .item-menu button::before {
+    content: "";
+    position: absolute;
+    background: inherit;
+    filter: blur(5px);
+} */
+.btn-text {
+    position: relative;
+    z-index: 11; /* Ensure the text is above the blur effect */
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px 10px rgb(0, 0, 0);
+    border-radius: 10px;
+
 }
 .item-menu button:hover{
     backdrop-filter: blur(100px);
@@ -135,6 +171,13 @@ header .toggle{
     transition: 300ms;
     box-shadow: 1px 1px 10px  #f1e698f5;
 }
+.item-menu button:focus{
+    outline: 3.5px solid var(--border-color-light);
+    backdrop-filter: blur(100px);
+    scale: 1.055;
+    transition: 300ms;
+}
+
 .dark-mode {
     background-color: var(--bg-color-dark);
     color: var(--text-color-dark);
@@ -142,3 +185,7 @@ header .toggle{
 .dark-mode2 {
     background-color: var(--bg-color-dark2);
   }
+
+a {
+    text-decoration: none;
+}

@@ -27,3 +27,114 @@ function toggleMode() {
 
   }
 }
+
+
+
+
+function practiceNotes() {
+  // Implementation of note practice
+}
+
+  // js/main.js
+  function startEarTraining() {
+    // Implementation of ear training exercises
+}
+
+  // js/main.js
+  function startMemoryGame() {
+    // Implementation of memory games
+}
+
+  // js/storage.js
+  function saveToLocalStorage(key, value) {
+    localStorage.setItem(key, JSON.stringify(value));
+}
+
+function getFromLocalStorage(key) {
+    return JSON.parse(localStorage.getItem(key));
+}
+
+  // js/main.js
+  function loadCustomization() {
+    // Implementation of customization mode
+}
+  // js/main.js
+  function startQuiz() {
+    // Implementation of quizzes
+}
+
+
+  // js/main.js
+  function animateNote() {
+    anime({
+        targets: '.note',
+        translateX: 250,
+        rotate: '1turn',
+        backgroundColor: '#FFF',
+        duration: 800
+    });
+}
+
+  // js/storage.js
+  function openDatabase() {
+    return new Promise((resolve, reject) => {
+        let request = indexedDB.open("kidZikDB", 1);
+        
+        request.onupgradeneeded = function(event) {
+            let db = event.target.result;
+            if (!db.objectStoreNames.contains('progress')) {
+                db.createObjectStore('progress', { keyPath: 'id', autoIncrement: true });
+            }
+        };
+        
+        request.onsuccess = function(event) {
+            resolve(event.target.result);
+        };
+        
+        request.onerror = function(event) {
+            reject(event.target.error);
+        };
+    });
+}
+
+function saveProgress(data) {
+    openDatabase().then(db => {
+        let transaction = db.transaction(['progress'], 'readwrite');
+        let store = transaction.objectStore('progress');
+        store.add(data);
+    });
+}
+
+function getProgress() {
+    return openDatabase().then(db => {
+        return new Promise((resolve, reject) => {
+            let transaction = db.transaction(['progress'], 'readonly');
+            let store = transaction.objectStore('progress');
+            let request = store.getAll();
+
+            request.onsuccess = function(event) {
+                resolve(event.target.result);
+            };
+
+            request.onerror = function(event) {
+                reject(event.target.error);
+            };
+        });
+    });
+}
+
+
+
+function playSound(soundId) {
+  const audioElement = document.getElementById(soundId);
+  if (audioElement) {
+      audioElement.play();
+  }
+}
+
+function navigateTo(sectionId) {
+  document.querySelectorAll('.section').forEach(section => {
+      section.style.display = 'none';
+  });
+  document.getElementById(sectionId).style.display = 'block';
+}

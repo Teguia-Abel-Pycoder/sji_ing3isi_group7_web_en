@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="x-icon" href="/Related-files/KIDZIK-icon.png">
+    <title>KidZik - Instruments</title>
+    <link rel="stylesheet" href="/Main/welcomePageStyle.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/Main/Dashboard.css">
+</head>
+
+<body>
+
+    <body style="display: flex;">
+        <div class="left-menu">
+            <header>
+                <img src="/Related-files/KIDZIK-logo.svg" height="100px" width=auto />
+                <img src="/Related-files/icons8-menu-squared-50.png" class="toggle">
+            </header>
+            <div class="inner-menu">
+                <div class="sub-menu">
+                    <button><img src="/Related-files/icons8-play-64.png" height="28"> Play</button>
+                    <button class="active-btn"><img src="/Related-files/icons8-instruments-de-musique-50.png"
+                            height="28">Instruments</button>
+                    <button><img src="/Related-files/icons8-game-controller-50.png" height="28">Games</button>
+                    <button><img src="/Related-files/icons8-help-50.png" height="28">Help</button>
+                    <button><img src="/Related-files/icons8-information-50.png" height="28">About</button>
+                </div>
+                <div class="bottom-menu"
+                    style="height: max-content; Margin:5%; padding:3% 1%; width:90%;background-color:#fdb409;border-radius: 5%">
+                    <button><img src="/Related-files/icons8-emergency-exit-50.png" height="28">Log out</button>
+                    <button id="toggleMode"><img id="modes" src="/Related-files/icons8-soleil-50.png" height="28">
+                        <h5 id="mode-text" style="font-size: 18px;">Night mode</h5>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="Right-menu" style="height: 1500px;">
+            <h1>Welcome to <img src="/Related-files/KIDZIK-logo.svg" height="100px" width="auto" /></h1>
+            <p>Let's learn some instruments</p>
+            <div class="item-menu" style="grid-template-rows: repeat(3,1fr); height: 45%;width: 80%;grid-template-columns: repeat(4,1fr);">
+                <button style="background-image:url(/Related-files/DrawnGuitar.jpg)"
+                    onclick="navigateTo('learn-notes'); playSound('guitar-sound'); ">
+                    <span class="btn-text">Guitar</span>
+                </button>
+                <button style="background-image:url(/Related-files/Black\ grand\ piano\ vector\ image\ on\ VectorStock.jpg)"
+                    onclick="playSound('piano-sound')">
+                    <span class="btn-text">Piano</span>
+                </button>
+                <button style="background-image:url(/Related-files/Harp.jpg)"
+                    onclick="playSound('harp-sound')">
+                    <span class="btn-text">Harp</span>
+                </button>
+                <button style="background-image:url(/Related-files/Trumpet.jpg); background-position: center;"
+                    onclick="playSound('trumpet-sound')">
+                    <span class="btn-text">Trumpet</span>
+                </button>
+                <button style="background-image:url(/Related-files/Saxophone.jpg)"
+                    onclick="playSound('saxophone-sound')">
+                    <span class="btn-text">Saxophone</span>
+                </button>
+                <button style="background-image:url(/Related-files/Violin.jpg); background-position:center;"
+                    onclick="playSound('violin-sound')">
+                    <span class="btn-text">Violin</span>
+                </button>
+                <button style="background-image:url(/Related-files/Flute.jpg); background-position: center;"
+                    onclick="playSound('flute-sound')">
+                    <span class="btn-text">Flute</span>
+                </button>
+                <button style="background-image:url(/Related-files/Acordeon.jpg)"
+                    onclick="playSound('accordion-sound')">
+                    <span class="btn-text">Accordion</span>
+                </button>
+                <button style="background-image:url(/Related-files/BassGuitar.jpg); background-position:center;"
+                    onclick=" playSound('bass-guitar-sound');navigateTo('progress');">
+                    <span class="btn-text">Bass Guitar</span>
+                </button>
+                <button style="background-image:url(/Related-files/Drum.jpg)"
+                    onclick="playSound('drum-sound')">
+                    <span class="btn-text">Drum</span>
+                </button>
+                <button style="background-image:url(/Related-files/Xylophone.jpg); background-position:center;"
+                    onclick="playSound('xylophone-sound')">
+                    <span class="btn-text">Xylophone</span>
+                </button>
+            </div>
+            <div id="learn-notes" class="section">
+                <h2>Learn Notes</h2>
+                <div class="staff">
+                    <!-- Staff with notes -->
+                </div>
+                <button class="btn btn-success mt-2" onclick="practiceNotes()">Practice</button>
+            </div>
+        </div>
+    
+        <!-- Audio elements -->
+        <audio id="guitar-sound" src="/Related-files/Music/acoustic-guitar-loop-f-91bpm-132687.mp3"></audio>
+        <audio id="piano-sound" src="/Related-files/Music/beautiful-piano-logo-143488.mp3"></audio>
+        <audio id="harp-sound" src="/Related-files/Music/harp.mp3"></audio>
+        <audio id="trumpet-sound" src="/Related-files/Music/Trumpet - Dallas Symphony Orchestra.mp3"></audio>
+        <audio id="saxophone-sound" src="/Related-files/Music/silly-trumpet-42-204944.mp3"></audio>
+        <audio id="violin-sound" src="/Related-files/Music/violin-audio.mp3"></audio>
+        <audio id="flute-sound" src="/Related-files/Music/Flute - Dallas Symphony Orchestra.mp3"></audio>
+        <audio id="accordion-sound" src="/Related-files/Music/accordion-melody-16-43390.mp3"></audio>
+        <audio id="bass-guitar-sound" src="/Related-files/Music/simple-bass-88983.mp3"></audio>
+        <audio id="drum-sound" src="/Related-files/Music/drum.mp3"></audio>
+        <audio id="xylophone-sound" src="/Related-files/Music/Xylophone - Dallas Symphony Orchestra.mp3"></audio>
+    
+
+        </div>
+
+
+    </body>
+
+    <script src="/Main/jquery-3.7.1.min.js"></script>
+    <script src="/Main/Js.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+
+</html>
