@@ -9,13 +9,15 @@ function toggleMode() {
   const leftMenu = document.querySelector('.left-menu');
   const rightMenu = document.querySelector('.Right-menu');
   const innerMenu = document.querySelector('.sub-menu');
-  const innerbutton = innerMenu.querySelectorAll('button');
+  const innerbutton = innerMenu.querySelectorAll('button a');
+
   if (isDarkMode) {
     leftMenu.classList.add('dark-mode');
     rightMenu.classList.add('dark-mode2');
     innerbutton.forEach(button => {
       button.style.color = 'white'; // Change text color to white
-    });
+    }
+  );
     $('#modes').attr('src', "/Related-files/icons8-soleil-50.png");
   } else {
     leftMenu.classList.remove('dark-mode');
@@ -79,18 +81,18 @@ function getFromLocalStorage(key) {
   function openDatabase() {
     return new Promise((resolve, reject) => {
         let request = indexedDB.open("kidZikDB", 1);
-        
+
         request.onupgradeneeded = function(event) {
             let db = event.target.result;
             if (!db.objectStoreNames.contains('progress')) {
                 db.createObjectStore('progress', { keyPath: 'id', autoIncrement: true });
             }
         };
-        
+
         request.onsuccess = function(event) {
             resolve(event.target.result);
         };
-        
+
         request.onerror = function(event) {
             reject(event.target.error);
         };
@@ -99,7 +101,7 @@ function getFromLocalStorage(key) {
 
 function saveProgress(data) {
     openDatabase().then(db => {
-        let transaction = db.transaction(['progress'], 'readwrite');
+        let transaction = db.transaction( ['progress'], 'readwrite');
         let store = transaction.objectStore('progress');
         store.add(data);
     });

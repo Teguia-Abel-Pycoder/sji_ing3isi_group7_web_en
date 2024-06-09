@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="x-icon" href="/Related-files/KIDZIK-icon.png">
+    <title>KidZik - Learn Notes</title>
+    <link rel="stylesheet" href="/Main/welcomePageStyle.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/Main/Dashboard.css">
+</head>
+
+<body>
+
+    <body style="display: flex;">
+        <div class="left-menu">
+            <header>
+                <img src="/Related-files/KIDZIK-logo.svg" height="100px" width=auto />
+                <img src="/Related-files/icons8-menu-squared-50.png" class="toggle">
+                <style>
+                    .item-menu button{
+                        background-color: rgb(255, 255, 255);
+                        font-size: 40px;
+                        border:3.5px solid #fdb40954 ;
+                    }
+                    .item-menu button:focus{
+                        outline: none;
+                        animation: bounce 1.5s infinite;
+                    }
+                    .item-menu{
+                        padding-top: 285px;
+                        background-image: url('/Related-files/GammeMusicale.png');
+                        background-size:contain;
+                        grid-template-rows: repeat(1,100px);
+                        width: 540px;
+                        height: 390px;
+                        grid-template-columns: repeat(8,63.25px);
+                        gap: 0.8%;
+                    }
+                </style>
+            </header>
+            <div class="inner-menu">
+                <div class="sub-menu">
+                    <button><img src="/Related-files/icons8-play-64.png" height="28"><a href="#">Play</a></button>
+                    <button><img src="/Related-files/icons8-instruments-de-musique-50.png" height="28"><a href="/Main/Instruments.html">Instruments</a></button>
+                    <button><img src="/Related-files/icons8-game-controller-50.png" height="28"><a href="#">Games</a></button>
+                    <button><img src="/Related-files/icons8-help-50.png" height="28"><a href="#">Help</a></button>
+                    <button><img src="/Related-files/icons8-information-50.png" height="28"><a href="#">About</a></button>
+                </div>
+                <div class="bottom-menu"
+                    style="height: max-content; Margin:5%; padding:3% 1%; width:90%;background-color:#fdb409;border-radius: 5%">
+                    <button><img src="/Related-files/icons8-emergency-exit-50.png" height="28">Log out</button>
+                    <button id="toggleMode"><img id="modes" src="/Related-files/icons8-soleil-50.png" height="28">
+                        <h5 id="mode-text" style="font-size: 16px;">Night mode</h5>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="Right-menu" style="height: 1000px;">
+            <button style="background-color:black; margin:3%;padding:5px;text-align:center; height: fit-content; width:fit-content; align-self:baseline"><a href="/Main/Dashboard.html">Back</a></button>
+            <h2 style="margin-bottom:3.5%;Top:0;color:#fdb409;text-shadow: 1px 1px 2px rgba(90, 85, 85, 0.459)" >Let's learn the 7 fundamental notes</h2>
+
+            <!-- <img style="margin-bottom:3.5%;" src="/Related-files/GammeMusicale.png" alt="" height="200px" > -->
+            <img style="margin-bottom:3.5%;border-radius: 5%;box-shadow: 1px 1px 10px  #f1e698f5;" src="/Related-files/GammeMultiColored.jpg" alt="" height="200px">
+            <div class="item-menu">
+                <button onclick="playSound('guitar-sound');">
+                    <span style="color: red;" class="btn-text">Do</span>
+                </button>
+                <button onclick="playSound('piano-sound');">
+                    <span style="color: orange;" class="btn-text">Re</span>
+                </button>
+                <button onclick="playSound('harp-sound');">
+                    <span style="color: yellow;" class="btn-text">Mi</span>
+                </button>
+                <button onclick="playSound('trumpet-sound');">
+                    <span style="color: rgb(19, 194, 19);" class="btn-text">Fa</span>
+                </button>
+                <button onclick="playSound('saxophone-sound');">
+                    <span style="color: blue;" class="btn-text">Sol</span>
+                </button>
+                <button onclick="playSound('violin-sound');">
+                    <span style="color: indigo;" class="btn-text">La</span>
+                </button>
+                <button onclick="playSound('flute-sound');">
+                    <span style="color: violet;" class="btn-text">Ti</span>
+                </button>
+                <button onclick="playSound('accordion-sound');">
+                    <span style="color: Pink;" class="btn-text">Do</span>
+                </button>
+            </div>
+            <!-- <img src="/Related-files/GammeMusicale.png" alt=""> -->
+
+        </div>
+
+        <!-- Audio elements -->
+        <audio id="guitar-sound" src="/Related-files/Music/do-80236.mp3"></audio>  <!-- Do -->
+        <audio id="piano-sound" src="/Related-files/Music/re-78500.mp3"></audio> <!-- Ré -->
+        <audio id="harp-sound" src="/Related-files/Music/mi-80239.mp3"></audio> <!-- Mi -->
+        <audio id="trumpet-sound" src="/Related-files/Music/fa-78409.mp3"></audio> <!-- Fa -->
+        <audio id="saxophone-sound" src="/Related-files/Music/sol-101774.mp3"></audio> <!-- Sol -->
+        <audio id="violin-sound" src="/Related-files/Music/la-80237.mp3"></audio> <!-- La -->
+        <audio id="flute-sound" src="/Related-files/Music/si-80238.mp3"></audio> <!-- si -->
+        <audio id="accordion-sound" src="/Related-files/Music/c6-102822.mp3"></audio> <!-- Do hi -->
+        <audio id="bass-guitar-sound" src="/Related-files/Music/simple-bass-88983.mp3"></audio>
+        <audio id="drum-sound" src="/Related-files/Music/drum.mp3"></audio>
+        <audio id="xylophone-sound" src="/Related-files/Music/Xylophone - Dallas Symphony Orchestra.mp3"></audio>
+
+
+        </div>
+
+
+    </body>
+
+    <script src="/Main/jquery-3.7.1.min.js"></script>
+    <script src="/Main/Js.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script>
+        function playSound(soundId) {
+            const audioElement = document.getElementById(soundId);
+            if (audioElement) {
+                audioElement.play();
+                audioElement.playbackRate = 1.75;
+            }
+          }
+    </script>
+
+
+</html>

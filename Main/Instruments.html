@@ -21,18 +21,17 @@
             </header>
             <div class="inner-menu">
                 <div class="sub-menu">
-                    <button><img src="/Related-files/icons8-play-64.png" height="28"> Play</button>
-                    <button class="active-btn"><img src="/Related-files/icons8-instruments-de-musique-50.png"
-                            height="28">Instruments</button>
-                    <button><img src="/Related-files/icons8-game-controller-50.png" height="28">Games</button>
-                    <button><img src="/Related-files/icons8-help-50.png" height="28">Help</button>
-                    <button><img src="/Related-files/icons8-information-50.png" height="28">About</button>
+                    <button><img src="/Related-files/icons8-play-64.png" height="28"><a href="#">Play</a></button>
+                    <button><img src="/Related-files/icons8-instruments-de-musique-50.png" height="28"><a href="/Main/Instruments.html">Instruments</a></button>
+                    <button><img src="/Related-files/icons8-game-controller-50.png" height="28"><a href="#">Games</a></button>
+                    <button><img src="/Related-files/icons8-help-50.png" height="28"><a href="#">Help</a></button>
+                    <button><img src="/Related-files/icons8-information-50.png" height="28"><a href="#">About</a></button>
                 </div>
                 <div class="bottom-menu"
                     style="height: max-content; Margin:5%; padding:3% 1%; width:90%;background-color:#fdb409;border-radius: 5%">
                     <button><img src="/Related-files/icons8-emergency-exit-50.png" height="28">Log out</button>
                     <button id="toggleMode"><img id="modes" src="/Related-files/icons8-soleil-50.png" height="28">
-                        <h5 id="mode-text" style="font-size: 18px;">Night mode</h5>
+                        <h5 id="mode-text" style="font-size: 16px;">Night mode</h5>
                     </button>
                 </div>
             </div>
@@ -42,7 +41,7 @@
             <p>Let's learn some instruments</p>
             <div class="item-menu" style="grid-template-rows: repeat(3,1fr); height: 45%;width: 80%;grid-template-columns: repeat(4,1fr);">
                 <button style="background-image:url(/Related-files/DrawnGuitar.jpg)"
-                    onclick="navigateTo('learn-notes'); playSound('guitar-sound'); ">
+                    onclick="playSound('guitar-sound'); ">
                     <span class="btn-text">Guitar</span>
                 </button>
                 <button style="background-image:url(/Related-files/Black\ grand\ piano\ vector\ image\ on\ VectorStock.jpg)"
