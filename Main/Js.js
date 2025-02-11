@@ -140,3 +140,30 @@ function navigateTo(sectionId) {
   });
   document.getElementById(sectionId).style.display = 'block';
 }
+
+
+let selectedAvatar = '';
+
+function selectAvatar(avatar) {
+    selectedAvatar = avatar;
+    document.querySelectorAll('.avatar').forEach(img => {
+        img.classList.remove('selected');
+    });
+    event.target.classList.add('selected');
+}
+
+function startGame() {
+  const playerName = document.getElementById('player-name').value;
+  if (!selectedAvatar || !playerName) {
+      alert('Please select an avatar and enter your name.');
+      return;
+  }
+
+  saveToLocalStorage('playerAvatar', selectedAvatar);
+  saveToLocalStorage('playerName', playerName);
+
+  document.getElementById('box1').style.display = 'none';
+  document.getElementById('game-content').style.display = 'block';
+
+  document.getElementById('welcome-message').textContent = `Hello, ${playerName}!`;
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="x-icon" href="/Related-files/KIDZIK-icon.png">
+    <link rel="stylesheet" href="/Main/welcomePageStyle.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/Main/Dashboard.css">
+    <!-- Font Family -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    </style>
+    <title>KidZik - Avatar</title>
+    <style>
+        body,
+        .box1 {
+            background-image: url("/Related-files/bg.svg");
+            background-color: #fff9e9;
+            background-position: center;
+            background-size: contain;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: "Poppins", sans-serif;
+        }
+
+        .box1 {
+            width: 1000px;
+            height: 600px;
+            background-image: none;
+            background-color: rgba(255, 255, 255, 0.801);
+            border-radius: 10px;
+            box-shadow: 1px 1px 2px rgba(190, 186, 186, 0.315);
+            padding: 100px;
+        }
+
+        #player-name {
+            outline: none;
+            border: 3.5px solid #fdb40959;
+            font-weight: bold;
+            font-size: 17px;
+            border-radius: 10px;
+            box-shadow: 1px 1px 2px rgba(190, 186, 186, 0.315);
+            width: 250px;
+            height: 70px;
+            padding: 10px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        .box1 button{
+            width: 200px;
+            font-weight: 400;
+            font-size: 15px;
+            margin: 50px;
+            color:white;
+            border: 3.5px solid #fdb409;
+            background-color:#fdb409;
+            box-shadow: 1px 1px 5px  #72707080;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="" class="box1">
+        <h1 style="color:#fdb409;text-shadow: 1px 1px 2px #fff9e9">Welcome to <img src="/Related-files/KIDZIK-logo.svg"
+                height="100px" width=auto /></h1>
+        <p style="margin-bottom:3.5%;color:#fdb409;text-shadow: 1px 1px 1px #fff9e9">Interactive Music
+            Theory for Kids</p>
+
+        <p style="font-weight: 300;">Enter your name and choose your avatar to continue</p>
+        <input type="text" name="name" id="player-name" placeholder="Enter your name" required>
+        <div class="avatar-options">
+            <img src="/Related-files/2148430463.jpg" class="avatar" onclick="selectAvatar('avatar1.png')">
+            <img src="/Related-files/BassGuitar.jpg" class="avatar" onclick="selectAvatar('avatar2.png')">
+            <img src="/Related-files/Xylophone.jpg" class="avatar" onclick="selectAvatar('avatar3.png')">
+            <img src="/Related-files/Acordeon2.jpg" class="avatar" onclick="selectAvatar('avatar1.png')">
+            <img src="/Related-files/2148430463.jpg"class="avatar" onclick="selectAvatar('avatar2.png')">
+            <img src="/Related-files/Storytime-music.jpg" class="avatar" onclick="selectAvatar('avatar3.png')">
+            <img src="/Related-files/acoustic-guitar-grey.jpg" class="avatar" onclick="selectAvatar('avatar1.png')">
+            <img src="/Related-files/DrawnGuitar.jpg"class="avatar" onclick="selectAvatar('avatar2.png')">
+            <img src="/Related-files/piano.png" class="avatar" onclick="selectAvatar('avatar3.png')">
+            <img src="/Related-files/4825.jpg" class="avatar" onclick="selectAvatar('avatar1.png')">
+            <img src="/Related-files/electric-guitar-gray.jpg"class="avatar" onclick="selectAvatar('avatar2.png')">
+            <img src="/Related-files/elegant-grand-piano-indoors-scene-generative-ai.jpg" class="avatar" onclick="selectAvatar('avatar3.png')">
+        </div>
+        <button onclick="startGame()">Start learning now</button>
+    </form>
+
+</body>
+    <script src="/Main/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/Main/Js.js"></script>
+
+
+</html>
